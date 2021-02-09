@@ -18,6 +18,14 @@ const routes: Routes = [
   {
     path: 'menu-left',
     loadChildren: () => import('./menu-left/menu-left.module').then( m => m.MenuLeftPageModule)
+  },
+  {
+    path: 'historique-trajets',
+    loadChildren: () => import('./menu/historique-trajets/historique-trajets.module').then( m => m.HistoriqueTrajetsPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./menu/home/home.module').then( m => m.HomePageModule)
   }
 ];
 

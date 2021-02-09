@@ -27,16 +27,16 @@ export class AppComponent {
         },
         {
           title : "Historique des trajets",
-          url   : "/contacts",
+          url   : "/historique-trajets",
           icon  : "time"
         },
 
            {
              title : "Aide",
-            url   : "/contacts",
+             url   : "/contacts",
                   icon  : "help"
            },
-                        {
+           {
                           title : "promotions",
                           url   : "/contacts",
                           icon  : "time"
