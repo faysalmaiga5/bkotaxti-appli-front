@@ -10,6 +10,14 @@ const routes: Routes = [
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./menu/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'menu-left',
+    loadChildren: () => import('./menu-left/menu-left.module').then( m => m.MenuLeftPageModule)
   }
 ];
 
