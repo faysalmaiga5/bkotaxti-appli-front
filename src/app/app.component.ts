@@ -26,6 +26,11 @@ export class AppComponent {
           icon  : "log-in"
         },
         {
+                  title : "Incription",
+                  url   : "/inscription",
+                  icon  : "log-in"
+                },
+        {
           title : "Historique des trajets",
           url   : "/historique-trajets",
           icon  : "time"
