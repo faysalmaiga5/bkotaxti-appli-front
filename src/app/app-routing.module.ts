@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./menu/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'inscription',
+    loadChildren: () => import('./menu/inscription/inscription.module').then( m => m.InscriptionPageModule)
   }
 ];
 
