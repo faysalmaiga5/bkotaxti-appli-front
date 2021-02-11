@@ -26,7 +26,7 @@ export class AppComponent {
           icon  : "log-in"
         },
         {
-                  title : "Incription",
+                  title : "Inscription",
                   url   : "/inscription",
                   icon  : "log-in"
                 },
