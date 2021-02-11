@@ -35,6 +35,11 @@ export class AppComponent {
           url   : "/historique-trajets",
           icon  : "time"
         },
+        {
+                  title : "Choix",
+                  url   : "/choix",
+                  icon  : "time"
+                },
 
            {
              title : "Aide",

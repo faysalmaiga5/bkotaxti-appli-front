@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'inscription',
     loadChildren: () => import('./menu/inscription/inscription.module').then( m => m.InscriptionPageModule)
+  },
+  {
+    path: 'choix',
+    loadChildren: () => import('./choix/choix.module').then( m => m.ChoixPageModule)
   }
 ];
 
