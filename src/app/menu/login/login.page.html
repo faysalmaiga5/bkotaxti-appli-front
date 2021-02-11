@@ -1,12 +1,40 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Login</ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content>
-<p>Page de connexion</p>
+
+
+<ion-content padding>
+    <p style="color: blue; text-align: center; margin-top: 50px;"> <b> Bienvenue sur la page de connexion</b></p><br><br><br>
+
+    <ion-icon name="person-circle"></ion-icon>
+
+    <form #form="ngForm" (ngSubmit)="login(form)">
+        <ion-grid>
+            <ion-row color="primary" justify-content-center>
+                <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+                    <div text-center>
+                        <h3>Login</h3>
+                    </div>
+                    <div padding>
+                        <ion-item>
+                            <ion-input name="num" type="number" placeholder="veuillez saisir votre numéro de téléphone" ngModel required></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-input name="password" type="password" placeholder="veuillez saisir votre mot de passe" ngModel required></ion-input>
+                        </ion-item>
+                    </div>
+                    <div padding>
+                        <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block">Connexion</ion-button>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </form>
+    <p style="text-align: center;">Pas encore inscrit cliquez <a routerLink="/inscription"><span style="color: blue;">ici</span></a></p>
 </ion-content>
