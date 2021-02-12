@@ -1,12 +1,51 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Inscription</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Inscription</ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content>
+
+
+<ion-content padding>
+    <p style="color: rgb(255, 145, 0); text-align: center; margin-top: 50px;"> <b> Bienvenue sur la page d'inscription</b></p><br>
+
+    <ion-icon name="person-add-outline"></ion-icon>
+
+    <form #form="ngForm" (ngSubmit)="register(form)">
+        <ion-grid>
+            <ion-row color="primary" justify-content-center>
+                <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+                    <div text-center>
+                        <h3>Formulaire d'inscription</h3>
+                    </div>
+                    <div padding>
+                        <ion-item>
+                            <ion-input name="num" type="number" placeholder="veuillez saisir votre numéro de téléphone" ngModel required></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-input name="nom" type="text" placeholder="veuillez saisir votre nom au complet" ngModel required></ion-input>
+                        </ion-item>
+                        <ion-select placeholder="veuillez choisir un : Client ou Chauffeur" required>
+                            <ion-select-option id="client" value="c">Client</ion-select-option>
+                            <ion-select-option id="chauffeur" value="ch">Chauffeur</ion-select-option>
+                        </ion-select>
+
+                        <ion-item>
+                            <ion-input name="password" type="password" placeholder="veuillez saisir votre mot de passe" ngModel required autocomplete="off"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-input name="password" type="password" placeholder="veuillez resaisir votre mot de passe" ngModel required autocomplete="off"></ion-input>
+                        </ion-item>
+                    </div>
+                    <div padding>
+                        <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block">Inscription</ion-button>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </form>
 
 </ion-content>
