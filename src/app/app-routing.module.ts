@@ -34,7 +34,11 @@ const routes: Routes = [
   {
     path: 'choix',
     loadChildren: () => import('./choix/choix.module').then( m => m.ChoixPageModule)
+  },  {
+    path: 'maptest',
+    loadChildren: () => import('./maptest/maptest.module').then( m => m.MaptestPageModule)
   }
+
 ];
 
 @NgModule({

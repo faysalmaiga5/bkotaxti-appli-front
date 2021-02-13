@@ -9,11 +9,14 @@
     <ion-title>Compte</ion-title>
     <ion-row>
       <ion-col size="10">
-        <ion-icon style="width: 30px; height: 30px; margin-left: auto; margin-right: auto" name="person-circle-outline"></ion-icon>&nbsp;&nbsp;&nbsp;
+        <ion-icon style="width: 30px; height: 30px; margin-left: auto; margin-right: auto"
+                  name="person-circle-outline"></ion-icon>&nbsp;&nbsp;&nbsp;
         Bienvenue {{profil.nom}} {{profil.prenom}}
       </ion-col>
       <ion-col size="2">
-        <ion-badge color="danger" (click)="logout()"><ion-icon style="height: 20px; width: 20px;" name="log-out-outline"></ion-icon></ion-badge>
+        <ion-badge color="danger" (click)="logout()">
+          <ion-icon style="height: 20px; width: 20px;" name="log-out-outline"></ion-icon>
+        </ion-badge>
       </ion-col>
     </ion-row>
   </ion-toolbar>
@@ -36,19 +39,19 @@
       <h3 style="text-align: center;">Bienvenue sur la page de connexion</h3>
       <div *ngIf="affiche" class="notFound">Adresse Email ou Mot de Passe incorrecte!</div>
       <ion-item lines="full">
-        <ion-label style="font-size: 12px;" position="floating">Telephone * </ion-label>
+        <ion-label style="font-size: 12px;" position="floating">Telephone *</ion-label>
         <ion-input type="tel" maxLength="8" name="phone" formControlName="phone"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label style="font-size: 12px;" position="floating">Mot de passe * </ion-label>
-        <ion-input type="password"  name="password" minlength="4" formControlName="password"></ion-input>
+        <ion-label style="font-size: 12px;" position="floating">Mot de passe *</ion-label>
+        <ion-input type="password" name="password" minlength="4" formControlName="password"></ion-input>
       </ion-item>
 
       <br><br><br>
 
       <ion-button type="submit" expand="full" color="warning">Se connecter</ion-button>
-      <p style="text-align: center;" >Mot de passe oublié?</p>
+      <p style="text-align: center;">Mot de passe oublié?</p>
 
       <br> <br>
       <p style="text-align: center;">

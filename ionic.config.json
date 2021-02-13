@@ -1,5 +1,7 @@
 {
   "name": "bkotaxi",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
